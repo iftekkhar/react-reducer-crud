@@ -5,3 +5,56 @@
 .ReactModal__Overlay.ReactModal__Overlay--after-open {
   background: #33333357 !important;
 }
+.post-card{
+  margin-top: 40px !important;
+    align-items: center !important;
+    justify-content: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 10px 10px #cccc;
+}
+.cat-card{
+  margin-top: 40px !important;
+    align-items: center !important;
+    justify-content: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 10px 10px #cccc;
+}
+.post-action {
+  display: flex;
+}
+.category-list span {
+  margin-right: 5px;
+  padding: 5px 10px;
+  background: #e0e1e2;
+  border-radius: 5px;
+}
+.MuiOutlinedInput-root {
+  width: 100%;
+  margin-bottom: 15px;
+}
+#demo-simple-select {
+  font-size: 14px;
+}
+#demo-simple-select-label {
+  margin-bottom: 15px;
+}
+.MuiToolbar-root.MuiToolbar-regular.MuiToolbar-gutters {
+  justify-content: space-between;
+}
+.nav a {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
+.logo a, .logo a:hover{
+  color: #fff;
+}
+.nav a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+.appBar {
+  background-color: #2185d0 !important;
+}

@@ -1,15 +1,13 @@
 import React, { useContext, useState } from 'react';
 import { GlobalContext } from '../Context/GlobalState';
-import Modal from 'react-modal';
-import { modalStyles } from '../ModalStyles';
+import { Button, Form, Icon, Modal } from 'semantic-ui-react';
 
-Modal.setAppElement('#root')
 
 const EditCategory = ({ category }) => {
     const ID = category.id
     const { editCategory } = useContext(GlobalContext);
 
-    const [editTitle, setEditTitle] = useState(category.label)
+    const [editTitle, setEditTitle] = useState(category.text)
     const handleEditTitle = e => { setEditTitle(e.target.value) }
 
 
@@ -17,8 +15,8 @@ const EditCategory = ({ category }) => {
         e.preventDefault();
         const updatedCategory = {
             id: ID,
-            value: ID,
-            label: editTitle
+            value: editTitle,
+            text: editTitle
         }
         editCategory(updatedCategory);
         closeModal()
@@ -30,20 +28,19 @@ const EditCategory = ({ category }) => {
 
     return (
         <div>
-            <button onClick={openModal}>Edit Category</button>
             <Modal
-                isOpen={modalIsOpen}
-                onRequestClose={closeModal}
-                style={modalStyles}
-                contentLabel="Edit Category"
+                onClose={closeModal}
+                onOpen={openModal}
+                open={modalIsOpen}
+                trigger={<Button icon primary><Icon name='edit' /></Button>}
             >
-
-                <form onSubmit={handleEditCategory}>
-                    <input onChange={handleEditTitle} value={editTitle}></input>
-                    <button type='submit'>Edit Category</button>
-
-                </form>
-
+                <Modal.Header>Update Category</Modal.Header>
+                <Modal.Content>
+                    <Form onSubmit={handleEditCategory}>
+                        <Form.Input required fluid type="text" name='title' onChange={handleEditTitle} value={editTitle} placeholder=' Category Name'></Form.Input>
+                        <Button primary type="submit">Update Category</Button>
+                    </Form>
+                </Modal.Content>
             </Modal>
         </div>
     );

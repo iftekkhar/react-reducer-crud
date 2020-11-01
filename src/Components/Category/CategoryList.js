@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import { Button, Grid, Icon } from 'semantic-ui-react';
 import { GlobalContext } from '../Context/GlobalState';
 import EditCategory from './EditCategory';
 
@@ -9,13 +10,20 @@ const CategoryList = ({ category }) => {
         removeCategory(ID)
     }
     return (
-        <div>
-            {category.id}
-            <li>{category.label}</li>
-            <EditCategory category={category}></EditCategory>
-            <button onClick={handleDelete}>Delete</button>
-            <hr />
-        </div>
+
+        <Grid className="cat-card">
+            <Grid.Column width={12} textAlign='left'>
+                <h2>{category.text}</h2>
+                <div className="post-action">
+                    <EditCategory category={category}></EditCategory>
+                    <Button icon color='red' onClick={handleDelete}>
+                        <Icon name='trash' />
+                    </Button>
+                </div>
+            </Grid.Column>
+        </Grid>
+
+
     );
 };
 
