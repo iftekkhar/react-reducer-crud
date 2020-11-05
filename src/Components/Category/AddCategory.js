@@ -25,9 +25,9 @@ const AddCategory = () => {
     };
 
     //Modal
-    const [catModalIsOpen, setcatModalIsOpen] = useState(false);
-    const openCatModal = () => setcatModalIsOpen(true);
-    const closeCatModal = () => setcatModalIsOpen(false);
+    const [catModalIsOpen, setCatModalIsOpen] = useState(false);
+    const openCatModal = () => setCatModalIsOpen(true);
+    const closeCatModal = () => setCatModalIsOpen(false);
 
     return (
         <div>
