@@ -7,6 +7,7 @@ import Category from './Components/Category/Category';
 
 function App() {
   return (
+    //Context API Global Provider
     <GlobalProvider>
       <div className="App">
         <Router>
