@@ -3,12 +3,12 @@
 ## Technologies Used :
 
 1. React
-2. Reducer Hook
-3. Context API
-3. Material Ui
-4. Semantic Ui 
-5. UUID v4
-6. React Router
+2. useReducer Hook
+3. useContext API
+4. Material Ui
+5. Semantic Ui
+6. UUID v4
+7. React Router
 
 ## Features:
 
